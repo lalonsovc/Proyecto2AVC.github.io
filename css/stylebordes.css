@@ -1,0 +1,131 @@
+#todo{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    width: 800px;
+    height: 549px;
+    position: relative;
+    background: white;
+
+}
+#c1{
+    margin: auto;
+    border: 3px solid rgb(229, 226, 226);
+    background: rgb(229, 226, 226);
+    width: 789px;
+    height: 150px;
+    position: relative;
+    top: 10px;
+    padding: 5px;
+    left: 15px;
+} 
+#c2{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    background-color: rgb(126, 122, 122);
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: 20px;
+    right: 305px;
+}
+#c3{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    background-color: rgb(126, 122, 122);
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: 22px;
+    right: 305px;
+}
+#c4{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    background-color: rgb(126, 122, 122);
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: 24px;
+    right: 305px;
+}
+#c5{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    background-color: rgb(126, 122, 122);
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: 26px;
+    right: 305px;
+}
+#c6{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    background-color: rgb(126, 122, 122);
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: 28px;
+    right: 305px;
+}
+#c7{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    background-color: rgb(126, 122, 122);
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: 30px;
+    right: 305px;
+}
+#c8{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    background-color: rgb(126, 122, 122);
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: 32px;
+    right: 305px;
+}
+#c9{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    background-color: rgb(126, 122, 122);
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: 34px;
+    right: 305px;
+}
+#c10{
+    margin: auto;
+    border: 3px solid rgb(126, 122, 122);
+    background-color: rgb(126, 122, 122);
+    width: 160px;
+    height: 20px;
+    position: relative;
+    top: 36px;
+    right: 305px;
+}
+#c11{
+    margin: auto;
+    border: 3px solid rgb(229, 226, 226);
+    background-color: rgb(229, 226, 226);
+    width: 160px;
+    height: 105px;
+    position: relative;
+    top: 42px;
+    right: 305px;
+}
+#c12{
+    margin: auto;
+    border: 3px solid rgb(229, 226, 226);
+    background-color: rgb(229, 226, 226);
+    width: 160px;
+    height: 105px;
+    position: absolute;
+    top: 42px;
+    right: 305px;
+    
+}

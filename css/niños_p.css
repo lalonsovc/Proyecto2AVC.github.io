@@ -1,0 +1,920 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dentro{
+    width: 100%;
+    height: 2000px;
+}
+#uno{
+    margin: auto;
+    background-color: black;
+    color: white;
+    height: 90px;
+
+}
+#boton{
+    border: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    font-size: 40px;
+    margin-right: 10px;
+}
+#boton2{
+    border: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    font-size: 40px;
+    transition: .3s ease all;
+}
+#va{
+    float: right;
+    right: 10px;
+    margin-bottom: 150px;
+}
+ul,ol{
+    list-style: none;
+}
+.nav > li{
+    float: left;
+}
+.nav li a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+}
+.nav li a:hover{
+    background-color: rgb(43, 42, 42);
+    
+}
+.nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    
+}
+.nav li:hover > ul{
+    display: block;
+}
+.nav li ul li{
+    position: relative;
+    z-index: 10;
+}
+.nav li ul li ul{
+    right: -100px;
+    top: 0;
+}
+button:hover{
+    background: white;
+    color: black;
+    box-shadow: 3px 3px 50px rgb(43, 42, 42);
+}
+img{
+    width: 1250px;
+    height: 470px;
+    position: relative;
+}
+.container-all{
+    position: absolute;
+    max-width: 1250px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 100px;
+}
+.slide{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255,255,255,0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+.pagination-item:hover{
+    transform: scale(2);
+}
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+.pagination-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: white;
+}
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: white;
+}
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: white;
+}
+input[id="4"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 3), 0, 0);
+}
+input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
+    background: white;
+}
+@keyframes autoplay{
+    25%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    50%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+    75%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+    100%{
+        transform: translate3d(calc(-100% * 3), 0, 0);
+    }
+}
+#color{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    z-index: 1;
+    position: absolute;
+}
+#forma{
+    position: relative;
+    height: 60px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    float: left;
+    color: white;
+}
+.input-cont{
+    float: left;
+    margin-left: 10px;
+}
+.input{
+    width: 250px;
+    height: 40px;
+    position: relative;
+    left: 90px;
+}
+.input input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    font-size: 18px;
+    background: none;
+}
+.input label{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.input input:focus ~label,
+.input input:valid ~label{
+    transform: translateY(-20px);
+    font-size: 16px;
+    color: silver;
+}
+.input input:focus,
+.input input:valid{
+    border-color: silver;
+}
+.chic{
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    bottom: 10px;
+    position: relative;
+    padding: 10px;
+}
+#move{
+    width: 54%;
+    height: 580px;
+    background-color: black;
+    position: relative;
+    bottom: -12px;
+    border-radius: 0px 10px 10px 0px;
+}
+.cajon{
+    width: 350px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.cajon figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.cajon figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.cajon figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.cajon figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+.cajon figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.cajon figure:hover > img{
+    transform: scale(1.3);
+}
+.cajon figure .capa h3{
+    color: #fff;
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+}
+.cajon figure .capa p{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+.mate{
+    width: 350px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    right:  10px;
+    margin-left: 410px;
+    bottom: 250px;
+}
+.mate figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.mate figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.mate figure .cel{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.mate figure:hover > .cel{
+    opacity: 1;
+    visibility: visible;
+}
+.mate figure:hover > .cel h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.mate figure:hover > img{
+    transform: scale(1.3);
+}
+.mate figure .cel h3{
+    color: #fff;
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+}
+.mate figure .cel p{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+.mu{
+    width: 350px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+    right:  10px;
+    bottom: 230px;
+}
+.mu figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.mu figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.mu figure .bol{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.mu figure:hover > .bol{
+    opacity: 1;
+    visibility: visible;
+}
+.mu figure:hover > .bol h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.mu figure:hover > img{
+    transform: scale(1.3);
+}
+.mu figure .bol h3{
+    color: #fff;
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+}
+.mu figure .bol p{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+.ma{
+    width: 350px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 400px;
+    bottom: 480px;
+}
+.ma figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.ma figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.ma figure .cho{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.ma figure:hover > .cho{
+    opacity: 1;
+    visibility: visible;
+}
+.ma figure:hover > .cho h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.ma figure:hover > img{
+    transform: scale(1.3);
+}
+.ma figure .cho h3{
+    color: #fff;
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+}
+.ma figure .cho p{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+#raa{
+    width: 640px;
+    height: 580px;
+    background-color: black;
+    float: right;
+    border-radius: 10px 0px 0px 10px;
+    bottom: 568px;
+    position: relative;
+}
+.pra{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    left: 25px;
+}
+.pra figure{
+    position: relative;
+    height: 250px;
+    width: 190px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.pra figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.pra figure .da{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.pra figure:hover > .da{
+    opacity: 1;
+    visibility: visible;
+}
+.pra figure:hover > .da h3{
+    margin-top: 90px;
+}
+.pra figure:hover > img{
+    transform: scale(1.3);
+}
+.pra figure .da h3{
+    color: #fff;
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+.za{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 235px;
+    bottom: 20px;
+}
+.za figure{
+    position: relative;
+    height: 250px;
+    width: 190px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.za figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.za figure .la{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.za figure:hover > .la{
+    opacity: 1;
+    visibility: visible;
+}
+.za figure:hover > .la h3{
+    margin-top: 90px;
+}
+.za figure:hover > img{
+    transform: scale(1.3);
+}
+.za figure .la h3{
+    color: #fff;
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+.gu{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 440px;
+    bottom: 70px;
+}
+.gu figure{
+    position: relative;
+    height: 250px;
+    width: 190px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.gu figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.gu figure .ci{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.gu figure:hover > .ci{
+    opacity: 1;
+    visibility: visible;
+}
+.gu figure:hover > .ci h3{
+    margin-top: 90px;
+}
+.gu figure:hover > img{
+    transform: scale(1.3);
+}
+.gu figure .ci h3{
+    color: #fff;
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+.jor{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 25px;
+    top: 150px;
+}
+.jor figure{
+    position: relative;
+    height: 250px;
+    width: 190px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.jor figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.jor figure .dan{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.jor figure:hover > .dan{
+    opacity: 1;
+    visibility: visible;
+}
+.jor figure:hover > .dan h3{
+    margin-top: 90px;
+}
+.jor figure:hover > img{
+    transform: scale(1.3);
+}
+.jor figure .dan h3{
+    color: #fff;
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+.di{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 235px;
+    top: 100px;
+}
+.di figure{
+    position: relative;
+    height: 250px;
+    width: 190px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.di figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.di figure .ci{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.di figure:hover > .ci{
+    opacity: 1;
+    visibility: visible;
+}
+.di figure:hover > .ci h3{
+    margin-top: 90px;
+}
+.di figure:hover > img{
+    transform: scale(1.3);
+}
+.di figure .ci h3{
+    color: rgb(255, 255, 255);
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+.hua{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 440px;
+    top: 50px;
+}
+.hua figure{
+    position: relative;
+    height: 250px;
+    width: 190px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+.hua figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.hua figure .na{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(81, 83, 83, 0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.hua figure:hover > .na{
+    opacity: 1;
+    visibility: visible;
+}
+.hua figure:hover > .na h3{
+    margin-top: 90px;
+}
+.hua figure:hover > img{
+    transform: scale(1.3);
+}
+.hua figure .na h3{
+    color: rgb(255, 255, 255);
+    font-weight: 10;
+    margin-bottom: 120px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+#yara{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 480px;
+    line-height: 1.7;
+    max-width: 1040px;
+    margin: auto;
+    font-size: 15px;
+}
+#ella{
+    background-color: black;
+    position: relative;
+    bottom: 420px;
+    height: 390px;
+}
+#one{
+    color: white;
+    position: relative;
+    top: 20px;
+    left: 50px;
+    width: 20%;
+    text-align: center;
+}
+.calla{
+    float: left;
+    margin-left: 10px;
+}
+.boca{
+    width: 250px;
+    height: 40px;
+    position: relative;
+    left: 50px;
+    top: 45px;
+}
+.boca input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    font-size: 18px;
+    background: none;
+}
+.boca label{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.boca input:focus ~label,
+.boca input:valid ~label{
+    transform: translateY(-20px);
+    font-size: 16px;
+    color: silver;
+}
+.boca input:focus,
+.boca input:valid{
+    border-color: silver;
+}
+a{
+    font-family:Roboto,sans-serif;
+    color:#000;
+    text-decoration:none}
+.centered{
+    position:absolute;
+    left:13%;
+    top:50%;
+    transform:translate(-50%,-50%)}
+.h-button{
+    background:#fff;
+    padding: 20px;
+    width:250px;
+    text-align:center}
+.h-button span{
+    display:inline-block;
+    min-width:.3em;
+    text-transform:uppercase;
+    transition:.25s cubic-bezier(0.5,-1,.5,2);
+    opacity:0;
+    transform:translate(0,-20px)}
+.h-button:before{
+    content:attr(data-text);
+    position:absolute;
+    width:100%;
+    left:0;
+    transition:.25s cubic-bezier(0.5,-1,.5,2);
+    text-transform:uppercase;
+    letter-spacing:3.5px;
+    opacity:1;
+    transform:translate(0,0)}
+.h-button:focus:before,.h-button:hover:before{opacity:0;transform:translate(0,20px)}
+.h-button:focus span,.h-button:hover span{opacity:1;transform:translate(0,0)}
+.h-button:focus span:nth-child(1),.h-button:hover span:nth-child(1){transition-delay:.025s}
+.h-button:focus span:nth-child(2),.h-button:hover span:nth-child(2){transition-delay:.05s}
+.h-button:focus span:nth-child(3),.h-button:hover span:nth-child(3){transition-delay:.075s}
+.h-button:focus span:nth-child(4),.h-button:hover span:nth-child(4){transition-delay:.1s}
+.h-button:focus span:nth-child(5),.h-button:hover span:nth-child(5){transition-delay:.125s}
+.h-button:focus span:nth-child(6),.h-button:hover span:nth-child(6){transition-delay:.15s}

@@ -1,0 +1,16 @@
+
+@font-face {
+    font-family: "fuentesig";
+    src: url("font/Signatria.ttf");
+}
+
+#titulo{
+    font-family: 'fuentesig' ;
+    font-size: 3em;
+}
+#seccion1{
+    text-transform: lowercase;
+}
+#seccion2{
+    
+}

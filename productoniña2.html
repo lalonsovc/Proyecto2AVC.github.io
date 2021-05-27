@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/estiloposi.css">
+    <style>
+        #cabecera{
+            width: 100%;
+            height: 120px;
+            background-color: #FFD800;
+            position: relative;
+        }
+        #img{
+            position: relative;
+            float: left;
+        }
+        #buscar{
+            position: relative;
+            float: right;
+        }
+        #perfil{
+            position: absolute;
+            width: 50px;
+            right: 70px;
+            top: 50px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        #perfilimg{
+            border-radius: 50px 50px 50px 50px;
+            width: 30px;
+        }
+        #micarrito{
+            position: absolute;
+            right: 10px;
+            top: 50px;
+            border-right: 1px solid black;
+        }
+        #carrito{
+            border-radius: 50px 50px 50px 50px;
+            width: 50px;
+            padding-right: 5px;
+        }
+        #titulo{
+            text-align: center;
+            font-size: 3em;
+            position: absolute;
+            top: 20px;
+        }
+        .nav{
+
+            position: absolute;
+            left: 470px;
+            top: 60px;
+            width: 800px;
+        }
+        #categorias{
+            position: absolute;
+            margin: auto;
+            width: 500px;
+        }
+        .nav>li>a{
+            width: 500px;
+        }
+        ul{
+            list-style: none;
+        }
+        .nav li {
+            float: left;
+        }
+        .nav a{
+            text-decoration: none;
+            display: block;
+            background-color: #0c0e7c;
+            color: white;
+            padding: 10px 12px;
+
+        }
+        .nav a:hover{
+            background-color: #24aaad;
+        }
+        .nav li ul{
+            display: none;
+            position: absolute;
+            min-width: 140px;
+        }
+        .nav li:hover > ul{
+            display: block;
+        }
+        .rut{
+            width: 170px;
+        }
+        #hombre{
+            width: 1000px;
+            height: 25px;
+            border-bottom: 1px solid;
+            left: 100px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cabecera">
+        <span id="img">
+            <a href=""><img src="images/Logo2.png" width="100px"></a>
+        </span>
+        <span id="titulo">Pingu's Store</span>
+        <div id="buscar">
+            <i>¿Qué buscas?</i><br>
+            <input type="text" style="width: 300px;">
+            <input type="submit" value="Buscar" >
+        </div>
+        <div id="perfil">
+            &nbsp;&nbsp;<a href=""><img id="perfilimg" src="images/perfil.png">
+            <figcaption;"><i><b>&nbsp;Perfil</b></i></figcaption></a>
+        </div>
+        <div id="micarrito">
+            <a href=""><img id="carrito" src="images/carrito.png">
+            <figcaption><i><b>Carrito</b></i></figcaption></a>
+        </div>
+        <div id="categorias">
+            <ul class="nav">
+                <li><a href="">CATEGORIAS</a>
+                    <ul>
+                        <li class="rut"><a href="">Mujeres</a></li>
+                        <li class="rut"><a href="">Varones</a></li>
+                        <li class="rut"><a href="">Niños</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div></div>
+    <br>
+    <div id="kayser"><h2><center>Pijama Diseños</center></h2></div>
+    <div class="container-all">
+
+        <input type="radio" id="1" name="image-slide" hidden/>
+        <input type="radio" id="2" name="image-slide" hidden/>
+
+        <div class="slide">
+
+            <div class="item-slide">
+                <img src="Images/pijamapolarniña.jpg">
+            </div>
+
+            <div class="item-slide">
+                <img src="Images/pijamapolarniña2.jpg">
+            </div>
+
+        </div>
+
+        <div class="pagination">
+
+            <label class="pagination-item" for="1">
+                <img src="Images/pijamapolarniña.jpg">
+            </label>
+
+            <label class="pagination-item" for="2">
+                <img src="Images/pijamapolarniña2.jpg">
+            </label>
+        </div>
+    </div>
+    <div id="precio">
+        <h1 style="color: rgb(243, 127, 224);">Pijama Polar</h1><br>
+        <h3 style="color: rgb(70, 19, 19);">
+            Marca: Pingu's Store
+        </h3>
+        <h1>S/.160.00</h1>
+        <h2><strike>S/.200.00</strike></h2>
+        <h3>Color:<select name="color"><option>Rojo</option><option>Negro</option><option>Azul</option></select>&nbsp; Talla:<select name="talla"><option>17</option><option>19</option><option>21</option><option>23</option></select></h3>
+        <br>
+        <a href="">
+        <div id="añadir"><h2><center><strong>Añadir al Carrito</strong></center></h2></div>
+        </a>
+    </div>
+    </body>
+    </html>

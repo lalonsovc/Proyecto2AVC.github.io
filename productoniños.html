@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="css/estiloposi.css">
+    <style>
+        #cabecera{
+            width: 100%;
+            height: 120px;
+            background-color: #FFD800;
+            position: relative;
+        }
+        #img{
+            position: relative;
+            float: left;
+        }
+        #buscar{
+            position: relative;
+            float: right;
+        }
+        #perfil{
+            position: absolute;
+            width: 50px;
+            right: 70px;
+            top: 50px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        #perfilimg{
+            border-radius: 50px 50px 50px 50px;
+            width: 30px;
+        }
+        #micarrito{
+            position: absolute;
+            right: 10px;
+            top: 50px;
+            border-right: 1px solid black;
+        }
+        #carrito{
+            border-radius: 50px 50px 50px 50px;
+            width: 50px;
+            padding-right: 5px;
+        }
+        #titulo{
+            text-align: center;
+            font-size: 3em;
+            position: absolute;
+            top: 20px;
+        }
+        .nav{
+
+            position: absolute;
+            left: 470px;
+            top: 60px;
+            width: 800px;
+        }
+        #categorias{
+            position: absolute;
+            margin: auto;
+            width: 500px;
+        }
+        .nav>li>a{
+            width: 500px;
+        }
+        ul{
+            list-style: none;
+        }
+        .nav li {
+            float: left;
+        }
+        .nav a{
+            text-decoration: none;
+            display: block;
+            background-color: #0c0e7c;
+            color: white;
+            padding: 10px 12px;
+
+        }
+        .nav a:hover{
+            background-color: #24aaad;
+        }
+        .nav li ul{
+            display: none;
+            position: absolute;
+            min-width: 140px;
+        }
+        .nav li:hover > ul{
+            display: block;
+        }
+        .rut{
+            width: 170px;
+        }
+        #hombre{
+            width: 1000px;
+            height: 25px;
+            border-bottom: 1px solid;
+            left: 100px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cabecera">
+        <span id="img">
+            <a href=""><img src="images/Logo2.png" width="100px"></a>
+        </span>
+        <span id="titulo">Pingu's Store</span>
+        <div id="buscar">
+            <i>¿Qué buscas?</i><br>
+            <input type="text" style="width: 300px;">
+            <input type="submit" value="Buscar" >
+        </div>
+        <div id="perfil">
+            &nbsp;&nbsp;<a href=""><img id="perfilimg" src="images/perfil.png">
+            <figcaption;"><i><b>&nbsp;Perfil</b></i></figcaption></a>
+        </div>
+        <div id="micarrito">
+            <a href=""><img id="carrito" src="images/carrito.png">
+            <figcaption><i><b>Carrito</b></i></figcaption></a>
+        </div>
+        <div id="categorias">
+            <ul class="nav">
+                <li><a href="">CATEGORIAS</a>
+                    <ul>
+                        <li class="rut"><a href="">Mujeres</a></li>
+                        <li class="rut"><a href="">Varones</a></li>
+                        <li class="rut"><a href="">Niños</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div></div>
+    <br>
+    <div id="hombre">
+        <center><h2>NIÑOS</h2></center>
+    </div>
+    <a href="productoniño1.html">
+    <div class="section">
+        <div class="box">
+            <img src="images/niñocuadros.jpg">
+            <div class="hover">
+                <h1>Pijama Cuadros  <br><u>Precio: S/.89</u><br>Antes: <strike>S/.100</strike>
+                   
+            </div>
+        </div>
+    </div>
+    </a>
+    <a href="productoniño2.html">
+    <div id="pijama2">
+    <div class="section">
+        <div class="box">
+            <img src="images/pijamapolarniño.jpg" alt="">
+            <div class="hover">
+                <h1>Pijama Polar<u><Main>Precio: S/.110</Main></u>Antes: <strike>S/.150</strike>
+                   
+            </div>
+        </div>
+    </div>
+</div>
+</a>
+<a href="productoniño3.html">
+<div id="pijama3">
+    <div class="section">
+        <div class="box">
+            <img src="images/pijamaanimadaniño.jpg">
+            <div class="hover">
+                <h1>Pijama Animada<u><Main>Precio: S/.200</Main></u>Antes: <strike>S/.240</strike>
+                   
+            </div>
+        </div>
+    </div>
+</div>
+</a>
+<a href="productoniño4.html">
+<div id="pijama2">
+    <div class="section">
+        <div class="box">
+            <img src="images/pijamadiseñoniños.jpg" alt="">
+            <div class="hover">
+                <h1>Pijama Diseños<u><Main>Precio: S/.150</Main></u>Antes: <strike>S/.190</strike>
+                   
+            </div>
+        </div>
+    </div>
+</div>
+</a>
+
+
+    
+
+    
+</body>
+</html>
